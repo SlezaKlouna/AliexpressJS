@@ -213,8 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const storageQuery = get => {
         if(get){
             if (localStorage.getItem('wishList')){
-                wishList.push(0, 0, ...JSON.parse(localStorage.getItem('wishList')))
-
+                wishList.push(...JSON.parse(localStorage.getItem('wishList')));
                // JSON.parse(localStorage.getItem('wishList')).forEach(id => wishList.push(id));
             }
             checkCount();
@@ -297,8 +296,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     getGoods(renderCard, randomSort);
 
-    storageQuery('get');
-    coockieQuery('get');
+    // storageQuery('get');
+    // coockieQuery('get');
 
     // goodsWrapper.append(createCardGoods(1, 'Darts', 1000, 'img/temp/Archer.jpg'));
     // goodsWrapper.append(createCardGoods(2, 'Flamingo', 3000, 'img/temp/Flamingo.jpg'));
